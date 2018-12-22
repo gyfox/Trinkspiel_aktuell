@@ -9,6 +9,7 @@
 #include<stdlib.h>
 #include<cmath>
 #include <windows.h>
+#include <time.h>
 
 using namespace std;
 
@@ -34,6 +35,8 @@ int main(){
 		Name_Spieler.push_back(name);
 	}
 	
+	srand (time(NULL));
+	
 	//nun soll in zufälligen Zeitabständen ein Spieler bestimmt werden, bis das Spiel abgebrochen wird
 	while(true){
 		rande = rand() % anzahl_spieler;
@@ -56,7 +59,7 @@ int main(){
 		
 		
 		cout << "Pause" << endl;
-		Sleep(rand() % 100 * 1000);
+		//Sleep(rand() % 100 * 1000);
 	}
 	
 	 
